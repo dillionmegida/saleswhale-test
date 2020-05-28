@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Source + Sans + Pro");
+
+body {
+	margin: 0;
+	font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+	--desktop-container-width: 85%;
+
+	// colors
+    --maincolor: #0688fa;
+    --lightblue: #64B4FA;
+	--whiteblue: #eff8ff;
+    --lightgrey: #537089;
+    --lightergrey: #F4F4F4;
+	--whitegrey: #cdd8e2;
+	--black: #002240;
+    --lightpink: #fff5f5;
+    --orange: #FFCC33;
+    --fadedblack: rgba(77, 77, 77, 0.267);
+    
+    // sizes
+	--sm-fontsize: 0.9rem;
+	--fontsize: 1rem;
+    --big-fontsize: 3rem;
+    --mid-fontsize: 2rem;
+    --smmid-fontsize: 1.4rem;
+	--sm-linehieght: 1;
+	--mid-lineheight: 1.5;
+    --sm-radius: 3px;
+    
+    // shadows
+    --light-shadow: 1px 1px 20px var(--fadedblack);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Source Sans Pro";
+}
+img {
+	height: 100%;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+.bgMain {
+	background-color: var(--maincolor);
+	color: white;
+}

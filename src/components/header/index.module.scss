@@ -1,0 +1,57 @@
+.header {
+	background-color: white;
+	padding: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+
+	.wrapper {
+		width: var(--desktop-container-width);
+		margin: 0 auto;
+		padding: 10px 0;
+		display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--fontsize);
+        font-weight: bold;
+
+		.brand {
+			display: flex;
+			align-items: center;
+			.logo {
+				width: 30px;
+				height: auto;
+			}
+			.name {
+				width: 120px;
+				margin-left: 10px;
+			}
+		}
+
+		nav {
+			ul {
+				display: flex;
+				li {
+					a {
+                        color: var(--black);
+                        margin: 0 20px;
+					}
+				}
+			}
+        }
+        
+        .others {
+            display: flex;
+            width: 220px;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                border-radius: var(--sm-radius);
+                padding: 10px;
+                &.login {
+                    color: var(--maincolor);
+                    border: 1px solid var(--maincolor);
+                }
+            }
+        }
+	}
+}

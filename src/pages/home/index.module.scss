@@ -1,5 +1,254 @@
 .main {
+	width: var(--desktop-container-width);
+	margin: 0 auto;
+
+	& .heroImg {
+		width: 100%;
+	}
+
+	& section {
+		margin-top: 120px;
+		&.intro {
+			margin-top: 0;
+		}
+		& h2 {
+			text-align: center;
+			font-size: var(--mid-fontsize);
+			color: var(--black);
+			margin-bottom: 40px;
+		}
+	}
+}
+.intro {
+	display: flex;
+	justify-content: space-between;
+	color: var(--black);
+	margin-bottom: 50px;
+	h1,
+	p {
+		margin-top: 40px;
+	}
 	h1 {
-		color: var(--maincolor);
+		width: 100%;
+		max-width: 450px;
+		font-size: var(--big-fontsize);
+		font-weight: bold;
+	}
+
+	p {
+		width: 50%;
+		font-size: var(--fontsize);
+		line-height: var(--mid-lineheight);
+	}
+}
+.cultureSection {
+    & > p {
+        text-align: center;
+        color: var(--lightgrey);
+        &.below{
+            margin: 0 auto;
+            max-width: 500px;
+            color: var(--black);
+        }
+	}
+	& p {
+        color: var(--black);
+		margin: 0;
+		font-size: var(--sm-fontsize);
+		line-height: var(--mid-lineheight);
+	}
+	.cultures {
+		display: flex;
+		margin: 60px 0;
+		justify-content: space-between;
+		width: 100%;
+		.culture {
+			max-width: 300px;
+			display: flex;
+			flex-direction: column;
+			& .cultureImg {
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+			}
+			& h3 {
+				font-size: var(--fontsize);
+				margin: 15px 0;
+				font-weight: bold;
+			}
+		}
+	}
+	.join {
+		display: block;
+		width: max-content;
+		margin: 20px auto;
+		padding: 10px;
+		border-radius: var(--sm-radius);
+		font-size: var(--sm-fontsize);
+	}
+}
+
+.progressSection {
+	.progressBlock {
+		background-color: var(--whiteblue);
+		width: max-content;
+		margin: 0 auto;
+		.story {
+			display: flex;
+			position: relative;
+			& > * {
+				padding: 80px 60px 0;
+			}
+			&:last-child {
+				.date,
+				p {
+					padding-bottom: 80px;
+				}
+			}
+			& p {
+				margin: 0;
+			}
+			.date {
+				border-right: 3px solid var(--maincolor);
+				color: var(--maincolor);
+				font-weight: bold;
+			}
+			.icon {
+				position: absolute;
+				top: 65px;
+				left: 140px;
+				background-color: white;
+				padding: 10px;
+				border-radius: 50%;
+
+				img {
+					height: 25px;
+					width: 25px;
+				}
+			}
+		}
+	}
+}
+
+.pinkBg {
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	left: 0;
+	background-color: var(--lightpink);
+	margin-top: 200px;
+	clip-path: polygon(0 9%, 100% 22%, 100% 91%, 0 100%);
+	overflow: hidden;
+
+	& > div {
+		height: 250px;
+		width: 250px;
+		border-radius: 50%;
+		&.leftCircle {
+			background-color: var(--orange);
+			margin-top: 500px;
+			float: left;
+			margin-left: 50px;
+		}
+		&.rightCircle {
+			background-color: var(--maincolor);
+			float: right;
+			margin-top: 350px;
+			margin-right: -50px;
+		}
+	}
+}
+
+.officesSection {
+	.offices {
+		display: flex;
+		justify-content: space-between;
+		.office {
+			width: 100%;
+			max-width: 500px;
+			border-radius: var(--sm-radius);
+			height: 250px;
+			background-color: white;
+			box-shadow: var(--light-shadow);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
+			color: var(--black);
+			border: 1px solid var(--whitegrey);
+			.countryImg {
+				height: 70px;
+				width: 70px;
+			}
+			span {
+				text-align: center;
+				display: block;
+				&.countryName {
+					font-size: var(--smmid-fontsize);
+					font-weight: bold;
+					margin: 15px 0;
+				}
+				&.address {
+				}
+			}
+		}
+	}
+}
+
+.investorsSection {
+	.investors {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.investor {
+			border: 1px solid var(--whitegrey);
+			border-radius: var(--sm-radius);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			box-shadow: var(--light-shadow);
+			width: 500px;
+			height: 250px;
+			margin-bottom: 40px;
+			& img {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.trialSection {
+	background-color: var(--maincolor);
+	padding: 70px 30px;
+	border-radius: var(--sm-radius);
+	h2 {
+        color: white !important;
+        margin-bottom: 20px !important;
+	}
+	div {
+		width: 400px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
+		a {
+            text-align: center;
+			width: 190px;
+            padding: 10px;
+            border-radius: var(--sm-radius);
+            font-size: var(--sm-fontsize);
+			&.demo {
+				background-color: white;
+                box-shadow: var(--light-shadow);
+                color: black;
+                font-weight: bold;
+            }
+            &.usecases {
+                border: 1px solid white;
+                color: white;
+            }
+		}
 	}
 }
