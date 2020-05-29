@@ -12,10 +12,10 @@ const Footer = () => {
 				<div className={styles.top}>
 					<div className={styles.brand}>
 						<div className={styles.logo}>
-							<img src="/assets/images/logo.svg" />
+							<img src="/assets/images/logo.svg" alt='Salewhale logo' />
 						</div>
 						<div className={styles.name}>
-							<img src="/assets/images/wordmark.svg" />
+							<img src="/assets/images/wordmark.svg" alt='Saleswhale wordmark' />
 						</div>
 					</div>
 					<div className={styles.quickLinksQroup}>
@@ -99,7 +99,7 @@ const Footer = () => {
 								</li>
 							</ul>
 							{offices.map(({ country, address }) => (
-								<>
+								<React.Fragment key={`country-${country}`}>
 									<h3>{country} Office</h3>
 									<span
 										dangerouslySetInnerHTML={{
@@ -109,7 +109,7 @@ const Footer = () => {
 											),
 										}}
 									></span>
-								</>
+								</React.Fragment>
 							))}
 						</div>
 					</div>
@@ -125,10 +125,10 @@ const Footer = () => {
 						</span>
 					</div>
 					<div className={styles.social}>
-						{socials.map(({ name, logo }) => (
-							<div className={styles.icon}>
+						{socials.map(({ name, logo, link }) => (
+							<NavLink key={`social-${name}`} to={link} className={styles.icon}>
 								<img src={logo} alt={`${name} logo`} />
-							</div>
+							</NavLink>
 						))}
 					</div>
 				</div>

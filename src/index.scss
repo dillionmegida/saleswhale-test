@@ -10,32 +10,34 @@ body {
 }
 
 :root {
-	--desktop-container-width: 85%;
+	--desktop-container-width: 90%;
 
 	// colors
-    --maincolor: #0688fa;
-    --lightblue: #64B4FA;
+	--maincolor: #0688fa;
+	--lightblue: #64b4fa;
+	--fadedblue: rgba(33, 144, 241, 0.589);
 	--whiteblue: #eff8ff;
-    --lightgrey: #537089;
-    --lightergrey: #F4F4F4;
+	--lightgrey: #537089;
+	--lightergrey: #f4f4f4;
 	--whitegrey: #cdd8e2;
 	--black: #002240;
-    --lightpink: #fff5f5;
-    --orange: #FFCC33;
-    --fadedblack: rgba(77, 77, 77, 0.267);
-    
-    // sizes
+	--lightpink: #fff5f5;
+	--orange: #ffcc33;
+	--lightorange: #ffd865;
+	--fadedblack: rgba(77, 77, 77, 0.267);
+
+	// sizes
 	--sm-fontsize: 0.9rem;
 	--fontsize: 1rem;
-    --big-fontsize: 3rem;
-    --mid-fontsize: 2rem;
-    --smmid-fontsize: 1.4rem;
+	--big-fontsize: 3rem;
+	--mid-fontsize: 2rem;
+	--smmid-fontsize: 1.4rem;
 	--sm-linehieght: 1;
 	--mid-lineheight: 1.5;
-    --sm-radius: 3px;
-    
-    // shadows
-    --light-shadow: 1px 1px 20px var(--fadedblack);
+	--sm-radius: 3px;
+
+	// shadows
+	--light-shadow: 1px 1px 20px var(--fadedblack);
 }
 
 code {
@@ -63,6 +65,10 @@ button {
 }
 a {
 	text-decoration: none;
+	padding: 3px;
+	&:focus {
+        outline: 3px solid var(--fadedblue);
+	}
 }
 .bgMain {
 	background-color: var(--maincolor);

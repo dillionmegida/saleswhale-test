@@ -15,7 +15,7 @@ const Home = () => {
 			<Header />
 			<main className={styles.main}>
 				<div className={styles.heroImg}>
-					<img src="/assets/images/hero-img.svg" />
+					<img src="/assets/images/hero-img.svg" alt='' />
 				</div>
 				<section className={styles.intro}>
 					<h1>A future where AI and humans work hand in hand</h1>
@@ -55,7 +55,7 @@ const Home = () => {
 								className={styles.culture}
 							>
 								<div className={styles.cultureImg}>
-									<img src={img} />
+									<img src={img} alt='' />
 								</div>
 								<h3>{title}</h3>
 								<p>{summary}</p>
@@ -124,7 +124,7 @@ const Home = () => {
 					<h2>Our Investors</h2>
 					<div className={styles.investors}>
 						{investors.map(({ logo, name }) => (
-							<div className={styles.investor}>
+							<div key={`investor-${name}`} className={styles.investor}>
 								<img src={logo} alt={`${name} logo`} />
 							</div>
 						))}
