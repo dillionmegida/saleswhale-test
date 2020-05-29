@@ -6,19 +6,18 @@
 	& h3 {
 		margin: 0 0 10px;
 	}
-    a:hover {
-        text-decoration: underline;
-    }
+	a:hover {
+		text-decoration: underline;
+	}
 }
 .wrapperTop {
-	width: var(--desktop-container-width);
+	width: var(--container-width);
 	margin: 0 auto;
 }
 .top {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-
 
 	@media (max-width: 550px) {
 		flex-wrap: wrap;
@@ -47,9 +46,10 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+    flex-wrap: wrap;
 	.quickLinks {
 		margin: 0 0 50px;
-		padding: 0 5px;
+        padding: 0 5px;
 		* {
 			color: var(--black);
 		}
@@ -67,16 +67,14 @@
 		}
 	}
 
-	@media (max-width: 350px) {
-		.quickLinks {
-			width: 100% !important;
-		}
-	}
-
 	@media (max-width: 768px) {
-		flex-wrap: wrap;
 		.quickLinks {
 			width: 50%;
+		}
+		@media (max-width: 350px) {
+			.quickLinks {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -89,7 +87,7 @@
 	.bottom {
 		display: flex;
 		justify-content: space-between;
-		width: var(--desktop-container-width);
+		width: var(--container-width);
 		margin: 0 auto;
 		padding: 30px 0;
 		.copyright {
@@ -107,19 +105,19 @@
 			}
 		}
 		.social {
-			width: 120px;
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: 20px;
 			.icon {
+				margin: 0 5px;
 				width: 30px;
 				height: 30px;
 				border-radius: 50%;
-                &:hover {
-                    transform: scale(1.1);
-                    border: 2px solid white;
-                }
-            }
+				&:hover {
+					transform: scale(1.1);
+					border: 2px solid white;
+				}
+			}
 		}
 	}
 	.vectors {

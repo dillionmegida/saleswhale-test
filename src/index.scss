@@ -6,11 +6,13 @@ body {
 		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
 		"Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 :root {
-	--desktop-container-width: 90%;
+	--container-width: 90%;
 
 	// colors
 	--maincolor: #0688fa;
@@ -63,7 +65,7 @@ ul {
 button {
 	cursor: pointer;
 }
-a {
+a, button {
 	text-decoration: none;
 	padding: 3px;
 	&:focus {

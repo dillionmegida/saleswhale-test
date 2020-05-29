@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React from "react";
 import styles from "./index.module.scss";
 
 import { NavLink } from "react-router-dom";
@@ -46,11 +46,6 @@ const OtherLinks = ({ otherLinkClass }) => (
 
 const Header = () => {
 	const [showDrawer, setShowDrawer] = useState(false);
-	const closeDrawerButtonRef = createRef();
-
-    const transferFocusToDrawer = () => {
-        closeDrawerButtonRef.current.focus()
-    }
 
 	return (
 		<header className={styles.header}>
@@ -70,12 +65,12 @@ const Header = () => {
 					</div>
 				</NavLink>
 
-				<div
-					className={styles.drawerToggler}
-				>
+				<div className={styles.drawerToggler}>
 					<button
 						className={styles.open}
-						onClick={() => setShowDrawer(true)}
+						onClick={() => {
+							setShowDrawer(true);
+						}}
 					>
 						<img
 							src="/assets/images/hamburger-icon.png"
@@ -91,30 +86,26 @@ const Header = () => {
 					<>
 						<Backdrop
 							backdropClicked={() => setShowDrawer(false)}
-						/>
-
-						<Drawer>
-							<div onLoad={transferFocusToDrawer} className={styles.drawer}>
-								<div className={styles.drawerToggler}>
-									<button
-										ref={closeDrawerButtonRef}
-										className={styles.close}
-										onClick={() => setShowDrawer(false)}
-									>
-										<img
-											src="/assets/images/close-icon.png"
-											alt="Close drawer button"
-										/>
-									</button>
-								</div>
-								<Nav navClass={styles.smallScreenNav} />
-								<OtherLinks
-									otherLinkClass={styles.smallScreen}
-								/>
-							</div>
-						</Drawer>
+                            />
 					</>
 				)}
+				<Drawer show={showDrawer}>
+					<div className={styles.drawer}>
+						<div className={styles.drawerToggler}>
+							<button
+								className={styles.close}
+								onClick={() => setShowDrawer(false)}
+							>
+								<img
+									src="/assets/images/close-icon.png"
+									alt="Close drawer button"
+								/>
+							</button>
+						</div>
+						<Nav navClass={styles.smallScreenNav} />
+						<OtherLinks otherLinkClass={styles.smallScreen} />
+					</div>
+				</Drawer>
 			</div>
 		</header>
 	);

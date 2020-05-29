@@ -1,11 +1,44 @@
 .drawer {
 	max-width: 400px;
 	padding: 20px;
-    width: 100vw;
-    height: 100vh;
+	width: 100%;
+	height: 100vh;
 	position: fixed;
 	left: 0;
-    top: 0;
-    background-color: white;
-    z-index: 2;
+	top: 0;
+	background-color: white;
+	z-index: 2;
+	visibility: hidden;
+
+	&.show {
+		visibility: visible;
+		animation: show 400ms;
+
+		@keyframes show {
+			from {
+				visibility: hidden;
+				transform: translateX(-100%);
+			}
+			to {
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&.hide {
+		visibility: hidden;
+        animation: hide 400ms;
+        
+        @keyframes hide {
+			from {
+				visibility: hidden;
+				transform: translateX(0);
+			}
+			to {
+				visibility: visible;
+				transform: translateX(-100%);
+			}
+		}
+	}
 }
